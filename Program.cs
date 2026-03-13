@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-// CORREÇÃO: Usar vírgulas para declarar várias variáveis do mesmo tipo
 string nomeJogador = "";
 int vitorias = 0, derrotas = 0, empates = 0;
 
@@ -33,7 +32,6 @@ while (rodando)
             ExibirEstatisticas(nomeJogador, vitorias, derrotas, empates);
             break;
         case '3':
-            // CORREÇÃO: Adicionada a lógica para trocar de player
             nomeJogador = MudarJogador(out vitorias, out derrotas, out empates);
             break;
         case '0':
@@ -46,10 +44,7 @@ while (rodando)
     }
 }
 
-// CORREÇÃO: Aspas adicionadas no início da frase
 Console.WriteLine("\n👋 Tchau! Até a próxima!");
-
-#region Métodos
 
 void ExibirBoasVindas()
 {
@@ -131,5 +126,3 @@ void AguardarTecla()
     Console.WriteLine("\nPressione qualquer tecla para continuar...");
     Console.ReadKey();
 }
-
-#endregion
